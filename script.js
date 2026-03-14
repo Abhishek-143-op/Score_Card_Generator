@@ -12,16 +12,22 @@ noPrintElements.forEach(el=>{
 el.style.visibility="hidden";
 });
 
+let element = document.querySelector("#resultCard");
+
+html2canvas(element,{scale:2}).then(canvas=>{
+
 const { jsPDF } = window.jspdf;
 
 let pdf = new jsPDF("p","mm","a4");
 
-let element = document.querySelector("#resultCard");
+let imgData = canvas.toDataURL("image/png");
 
-pdf.html(element,{
-callback:function(pdf){
+let imgWidth = 190;
+let imgHeight = canvas.height * imgWidth / canvas.width;
 
-let name = document.querySelector('[contenteditable="true"]').innerText;
+pdf.addImage(imgData,"PNG",10,10,imgWidth,imgHeight);
+
+let name = document.querySelector('.edit').innerText;
 
 pdf.save(name + "-result.pdf");
 
@@ -30,13 +36,8 @@ el.style.visibility="visible";
 });
 
 loading.style.display="none";
-btn.disabled = false;
+btn.disabled=false;
 
-},
-x:10,
-y:10,
-width:180,
-windowWidth:900
 });
 
 }
@@ -63,14 +64,20 @@ optional.forEach(el=>{
 el.style.display="none";
 });
 
+let element = document.querySelector("#resultCard");
+
+html2canvas(element,{scale:2}).then(canvas=>{
+
 const { jsPDF } = window.jspdf;
 
 let pdf = new jsPDF("p","mm","a4");
 
-let element = document.querySelector("#resultCard");
+let imgData = canvas.toDataURL("image/png");
 
-pdf.html(element,{
-callback:function(pdf){
+let imgWidth = 190;
+let imgHeight = canvas.height * imgWidth / canvas.width;
+
+pdf.addImage(imgData,"PNG",10,10,imgWidth,imgHeight);
 
 pdf.save("simple-result.pdf");
 
@@ -83,12 +90,8 @@ el.style.visibility="visible";
 });
 
 loading.style.display="none";
-btn.disabled = false;
+btn.disabled=false;
 
-},
-x:10,
-y:10,
-width:180,
-windowWidth:900
 });
+
 }

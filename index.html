@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Editable Result Card</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ 
+    <!--About sections -->
+<div class="page-info no-print">
+
+<h2>📄 About This Page</h2>
+
+<p>
+    
+This webpage allows students to <strong>create and edit</strong> a university-style result grade card.
+All fields in the result card are <strong>editable</strong>  and the result can be downloaded as a PDF.
+
+</p>
+
+<hr>
+
+<div class="disclaimer-box no-print">
+
+<div class="disclaimer-title">⚠ Disclaimer</div>
+
+<p>
+This webpage is created for <strong>educational and entertainment purposes only</strong>.
+The result card generated on this page is <strong>not an official document</strong> and must not be used for illegal, fraudulent, or misleading activities.
+</p>
+
+<p>
+The creator of this webpage is <strong>not responsible for any misuse, misrepresentation, or consequences</strong> arising from the use of this tool.
+</p>
+
+</div>
+</div>
+
+<!-- main Result -->
+
+<div class="container" id="resultCard">
+
+<div class="header">
+<img src="images/hptu-logo-hd.jpg" class="logo">
+
+<div class="title">
+<h2 contenteditable="true">Himachal Pradesh Technical University</h2>
+<h3 contenteditable="true">
+Result Grade Card of B.Tech | CSE | SEM-3rd | Dec-2026
+</h3>
+</div>
+
+</div>
+
+
+
+<h3>Personal Details</h3>
+
+<table>
+<tr>
+<td>Roll No</td>
+<td contenteditable="true" class="edit">9696969</td>
+</tr>
+
+<tr>
+<td>Student Name</td>
+<td contenteditable="true" class="edit">Karan Aujla</td>
+</tr>
+
+<tr>
+<td>Father Name</td>
+<td contenteditable="true" class="edit"> Balwinder Singh Aujla</td>
+</tr>
+</table>
+
+
+<h3>Marks Details</h3>
+
+<table>
+
+<tr>
+<th>Subject</th>
+<th>Subject Code</th>
+<th>Credit</th>
+<th>Grade</th>
+<th class="optional">Grade Point</th>
+<th class="optional">Credit Point</th>
+</tr>
+
+<tr>
+<td contenteditable="true">Probability Theory and Statistis</td>
+<td contenteditable="true">MAFC-311</td>
+<td contenteditable="true">4</td>
+<td contenteditable="true">A</td>
+<td contenteditable="true" class="optional" >8</td>
+<td contenteditable="true"class="optional">26</td>
+</tr>
+
+<tr>
+<td contenteditable="true">Data structure and Algorithms</td>
+<td contenteditable="true">CSPC-311</td>
+<td contenteditable="true">3</td>
+<td contenteditable="true">A</td>
+<td contenteditable="true" class="optional">8</td>
+<td contenteditable="true" class="optional">24</td>
+</tr>
+
+<tr>
+<td contenteditable="true">Python Programming</td>
+<td contenteditable="true">CSPC-312</td>
+<td contenteditable="true">3</td>
+<td contenteditable="true">A</td>
+<td contenteditable="true" class="optional">8</td>
+<td contenteditable="true" class="optional">24</td>
+</tr>
+
+<tr>
+<td contenteditable="true">Computer Organization and Architecture</td>
+<td contenteditable="true">CSPC-313</td>
+<td contenteditable="true">4</td>
+<td contenteditable="true">A</td>
+<td contenteditable="true" class="optional">8</td>
+<td contenteditable="true" class="optional">24</td>
+</tr>
+
+<tr>
+<td contenteditable="true">Indian knowledge system </td>
+<td contenteditable="true">IKS-311</td>
+<td contenteditable="true">4</td>
+<td contenteditable="true">A</td>
+<td contenteditable="true" class="optional">8</td>
+<td contenteditable="true" class="optional">32</td>
+</tr>
+<tr>
+<td contenteditable="true">Engineering Economics</td>
+<td contenteditable="true">HS-311</td>
+<td contenteditable="true">4</td>
+<td contenteditable="true">A</td>
+<td contenteditable="true" class="optional">8</td>
+<td contenteditable="true" class="optional">32</td>
+</tr>
+<tr>
+<td contenteditable="true">Python Programming Lab Practical</td>
+<td contenteditable="true">CSPC-312P</td>
+<td contenteditable="true">4</td>
+<td contenteditable="true">A</td>
+<td contenteditable="true" class="optional">8</td>
+<td contenteditable="true" class="optional">8</td>
+</tr>
+<tr>
+<td contenteditable="true">Digital System Design Lab Practical</td>
+<td contenteditable="true">ECEPC-312P</td>
+<td contenteditable="true">4</td>
+<td contenteditable="true">A</td>
+<td contenteditable="true" class="optional">8</td>
+<td contenteditable="true" class="optional">8</td>
+</tr>
+<tr>
+<td contenteditable="true">Data Structure and Algorithms Lab-Practical</td>
+<td contenteditable="true">CSPC-311P</td>
+<td contenteditable="true">4</td>
+<td contenteditable="true">A</td>
+<td contenteditable="true" class="optional">8</td>
+<td contenteditable="true" class="optional">16</td>
+</tr>
+
+</table>
+
+
+
+<h3>Final Result</h3>
+
+<table>
+
+<tr>
+<td>SGPA</td>
+<td contenteditable="true" class="edit">8.01</td>
+</tr>
+
+<tr>
+<td>CGPA</td>
+<td contenteditable="true" class="edit">7.81</td>
+</tr>
+
+<tr>
+<td>Result</td>
+<td contenteditable="true" class="edit">Pass</td>
+</tr>
+
+</table>
+
+<!-- buttons Sections -->
+<div class="button-section no-print">
+
+<div class="download-option">
+
+<button class="btn-full" onclick="downloadPDF()">
+⬇ Download Complete Result
+</button>
+
+<p class="btn-desc">
+Includes all details such as Grade Point and Credit Point.
+</p>
+
+</div>
+
+
+<div class="download-option">
+
+<button class="btn-simple" onclick="downloadWithoutOptional()">
+⬇ Download Simple Result
+</button>
+
+<p class="btn-desc">
+Downloads result card without Grade Point and Credit Point.
+</p>
+
+</div>
+
+</div>
+
+<!--footer section-->
+
+<div class="footer" contenteditable="true">
+Note: This is computer generated result grade card. 
+H.P Technical University reserves the right to rectify errors.
+</div>
+
+</div>
+
+<div id="loadingMessage" class="loading-overlay no-print">
+<div class="loading-box">
+<div class="spinner"></div>
+<p>Generating PDF…</p>
+</div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
